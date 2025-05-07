@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errorsia - Products</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 240px;
+            /* background-color: red; */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(248, 248, 248);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        body .shell-main-nav {
+            margin-bottom: 0;
+        }
+
+        .main {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1430px;
+            overflow-x: hidden;
+            transform: translateY(0px);
+            background-color: #fff;
+            transition: .3s;
+            padding: 50px;
+            border: 1px solid #000;
+        }
+
+        .img {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('./image/backgroud1.png');
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .img::after {
+            content: '我们的产品';
+            width: 500px;
+            height: 200px;
+            border-radius: 3px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: #fff 10px solid;
+            color: #fff;
+            letter-spacing: 30px;
+            font: 100 70px 'font';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /* -------------------------------------- */
+
+        .section-top {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+
+        .section-top-middle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-image: url('./image/miku.jpg');
+            background-size: cover;
+            background-position-y: -30px;
+            margin: 0 50px;
+            border: 15px solid rgba(0, 0, 0, 0.151);
+        }
+
+        .section-top-left,
+        .section-top-right {
+            width: 300px;
+            height: 300px;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        .section-top-left {
+            text-align: right;
+        }
+
+        .section-top p {
+            font-size: 26px;
+            color: #22A39F;
+            margin: 5px 0;
+        }
+
+        .section-middle,
+        .section-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-bottom {
+            position: relative;
+        }
+
+        .section-middle-box {
+            width: 100%;
+            display: flex;
+            margin: 50px 0;
+        }
+
+        .section-middle-left {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-middle-left span {
+            text-align: left;
+            color: rgb(241, 167, 167);
+            margin-top: 20px;
+        }
+
+        .section-middle-right {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .section-middle-right img {
+            width: 400px;
+        }
+
+        .section-middle-left span {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .Skills {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 40px 0;
+        }
+
+        .Skills li {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px 0;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .Skills li span,
+        .Skills li p {
+            text-align: center;
+            font-size: 20px;
+            display: block;
+            width: 50%;
+            transition: .2s;
+            letter-spacing: 0px;
+        }
+
+        .Skills li p {
+            color: #22A39F;
+        }
+
+        .Skills li:hover p {
+            letter-spacing: 5px;
+        }
+
+        .Achievement {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Achievement-left {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .Achievement-left h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .Achievement-left span {
+            font-size: 10px;
+        }
+
+        .Achievement-right {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 450px;
+        }
+
+        .Achievement-right img {
+            width: 200px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            transition: .3s;
+        }
+
+        .Achievement-right img:hover {
+            transform: scale(1.1);
+        }
+
+        article {
+            display: flex;
+            justify-content: center;
+        }
+
+        aside {
+            width: 100%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(240, 240, 224);
+            padding: 50px 0;
+        }
+
+        /* .bottom {
+            width: 1300px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        } */
+
+        .bottom::after {
+            content: 'Errorsia@errorsia.com';
+            position: absolute;
+            top: -170px;
+            width: 100%;
+            text-align: center;
+            font: 300 35px '';
+        }
+
+        /* .bottom img {
+            width: 23%;
+            height: 300px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/miku.png" alt="">
+                    <span>Errorsia Studio</span>
+                </div>
+                <ul>
+                    <li></li>
+                    <li><a href="./index.html">关于我们</a></li>
+                    <li><a href="./products.html">产品中心</a></li>
+                    <li><a href="./development.html">我们的发展</a></li>
+                    <li><a href="./mate.html">我们的伙伴</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+            <div class="img"></div>
+            <div class="main">
+                <section>
+                    <div class="section-top">
+                        <div class="section-top-left">
+                            <p> Studio Name:<br /></p>
+                            Errorsia<br />
+                            <p>Founded:<br /></p>
+                            2024<br />
+                            <!-- <p>:Speciality<br /></p>
+                            Illustration, logo design, scene Perspective<br /> -->
+
+                        </div>
+                        <div class="section-top-middle">
+
+                        </div>
+                        <div class="section-top-right">
+                            <p>Developers:</p>
+                            Arthur_xyz
+
+                        </div>
+                    </div>
+                    <div class="section-middle">
+                        <h2 style="font-size: 30px; margin-top: 50px;">About Us</h2>
+                        <!-- <span>“Painting is the art of life”</span> -->
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span>XYZ Virus Killer</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>A super powerful tool to kill virus.</span>
+                            </div>
+                        </div>
+
+                        <!-- <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span>Sep2020-Jun2021</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>See the interest on the way. Extend the road under your feet with stories.
+                                    <br><br>
+
+                                    See the interest in creating everything. Paint the stars and the sea in the distance
+                                    with a brush.</span>
+                            </div>
+                        </div> -->
+
+                        <div class="section-middle-box" style="border-bottom:solid 1px #000; padding-bottom: 20px;">
+                            <div class="section-middle-left">
+                                <span>Jiyu Immunodeficiency Viruses<br>(JIV)</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>Developing now!</span>
+                            </div>
+                        </div>
+
+                        <!-- <h2 style="font-size: 30px; margin: 30px 0;">Painting everyday</h2>
+                        <span>“My favorite illustration”</span>
+
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span>The illustration lines are very tense, and it is obvious that they are drawn
+                                    rather than polished. They are both powerful and elegant. Just like good sketch
+                                    lines, they are good at both plane expression and spatial expression.</span>
+                            </div>
+                            <div class="section-middle-right">
+                                <img src="./image/2 (10).png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="section-middle-box">
+                            <div class="section-middle-right">
+                                <img src="./image/2 (1).png" alt="">
+                            </div>
+                            <div class="section-middle-left">
+                                <span>Style and personality, combining technology with life to further express
+                                    themselves</span>
+                            </div>
+
+                        </div>
+
+                        <h2 style="font-size: 30px; margin: 30px 0;"></h2>
+
+                        <div class="section-middle-box" style="border-bottom:solid 1px #000; padding-bottom: 40px;">
+                            <div class="section-middle-left" style="width: 100%;">
+                                <span>The works directly attack the soul "-- Taking the road that others dare not take
+                                    and interpreting their own legends
+                                </span>
+                            </div>
+                        </div>-->
+                    </div>
+
+                </section>
+                <article>
+                    <div class="section-bottom">
+
+                        <h2 style="margin-top: 60px; color: #22A39F">Tools</h2>
+                        <ul class="Skills" style="border-bottom:solid 1px #000; padding-bottom: 40px;">
+                            <li><span>XYZ Virus Killer</span>
+                                <p>★★★☆☆</p>
+                            </li>
+                            <li><span>JIV</span>
+                                <p>★★★★★</p>
+                            </li>
+                            <li><span>c++</span>
+                                <p>★★★★★</p>
+                            </li>
+                            <li><span>Python</span>
+                                <p>★★★★★</p>
+                            </li>
+                            <!-- <li><span>color</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>structure</span>
+                                <p>★★★★★</p>
+                            </li> -->
+                        </ul>
+
+                    </div>
+                </article>
+                <aside>
+                    <h2 style="font-size: 30px; margin-top: 30px;">Readme</h2><br />
+                    <span>Nothing</span>
+                    <p style="margin-top: 50px;font-size: 18px; color: #37373796;">
+                        <br>🎉🎉🎉
+                    </p>
+                </aside>
+            </div>
+            <!-- <div class="bottom">
+                <img src="./image/2 (6).png" alt="">
+                <img src="./image/2 (2).png" alt="">
+                <img src="./image/2 (4).png" alt="">
+                <img src="./image/2 (9).png" alt="">
+            </div> -->
+            <div class="shell-main-footer">
+                <span>Copyright - Errorsia Studio</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            let top = window.scrollY
+            console.log(top)
+            if (top > 200) {
+                $('.main').css('transform', 'translateY(-300px)')
+            } else {
+                $('.main').css('transform', 'translateY(0%)')
+            }
+            // if (top > 650) {
+
+            // } else {
+
+            // }
+        })
+    </script>
+</body>
+
+</html>
